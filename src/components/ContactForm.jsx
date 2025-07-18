@@ -13,10 +13,10 @@ const ContactForm = () => {
             <img src={backgroundImage} className='absolute inset-0 w-full h-full object-cover object-center z-0'></img>
             <div className='w-full' >
                 {/* Título */}
-                <div className="titulo-seccion-videos text-center">
+                <div className="xs:text-center text-center ">
                     <h2 className="relative top-20 text-center text-2xl md:text-2xl font-medium text-primary">Contacta a Juli G Pop</h2>
                 </div>
-                <form onSubmit={handleSubmit} className='relative top-[100px] w-[35%] h-[450px] flex flex-col gap-2 shadow-lg shadow-primary backdrop-blur-sm bg-white/30 p-6 rounded-xl mx-auto'>
+                <form onSubmit={handleSubmit} className='relative top-[100px] w-[75%] sm:w-[75%] md:w-[65%] lg:w-[45%] h-[450px] flex flex-col gap-2 shadow-lg shadow-primary backdrop-blur-sm bg-white/30 p-6 rounded-xl mx-auto'>
                     <label htmlFor="name" className='text-primary font-medium'>
                         Nombre Completo
                     </label>
@@ -55,7 +55,7 @@ const ContactForm = () => {
                         Mensaje
                     </label>
                     <textarea
-                        className='border border-text-gray-600 text-sm text-gray-500 rounded-md p-1'
+                        className='h-[20%] border border-text-gray-600 text-sm text-gray-500 rounded-md p-1'
                         id="message"
                         name="message"
                         required
@@ -65,7 +65,7 @@ const ContactForm = () => {
                         field="message"
                         errors={state.errors}
                     />
-                    <button type="submit" disabled={state.submitting} className='w-[30%] bg-primary text-white p-2 rounded-xl'>
+                    <button type="submit" disabled={state.submitting} className='relative top-5 w-[30%] bg-primary text-white p-2 rounded-xl'>
                         Submit
                     </button>
                 </form>
