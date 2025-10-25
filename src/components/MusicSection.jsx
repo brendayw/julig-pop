@@ -22,8 +22,7 @@ const MusicSection = () => {
 
   return (
     <section id="musica" className="h-screen w-full overflow-hidden py-16 px-4 md:px-8 lg:px-16">
-
-      <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto">
 
         {/* Título */}
         <div className="titulo-seccion-musica text-center mb-12">

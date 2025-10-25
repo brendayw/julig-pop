@@ -22,7 +22,7 @@ a {
 
 h1 {
   font-family: "Montserrat", serif;
-  color: #94a3b8;
+  color: #94a3b8; /*cambiar este color*/
 }
 
 .blue__gradient {
@@ -37,5 +37,10 @@ h1 {
 
 .orange__gradient {
   background: linear-gradient(90deg, rgba(188, 165, 255, 0) 0%, #fd5701 100%);
+  filter: blur(150px);
+}
+
+.red__gradient {
+  background: linear-gradient(180deg, rgba(188, 165, 255, 0) 0%, #ad131a 100%);
   filter: blur(150px);
 }

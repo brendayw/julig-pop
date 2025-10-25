@@ -40,7 +40,9 @@ const Home = () => {
         
         <div className='absolute z-[0] w-[90%] h-[45%] top-200 orange__gradient opacity-40'></div>
         <Biography />
+        <div className='absolute z-[0] w-[45%] h-[30%] red__gradient opacity-60'></div>
         <MusicSection />
+        <div className='absolute z-[0] w-[100%] h-[30%] blue__gradient opacity-20'></div>
         <VideosSection />
         <ContactForm />
 
