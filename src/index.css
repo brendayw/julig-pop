@@ -13,6 +13,7 @@
 html, body, #root {
   font-family: "Montserrat", serif;
   height: 100%;
+  background-color: #000000;
 }
 
 a {
@@ -22,4 +23,19 @@ a {
 h1 {
   font-family: "Montserrat", serif;
   color: #94a3b8;
+}
+
+.blue__gradient {
+  background: linear-gradient(180deg, rgba(188, 165, 255, 0) 0%, #523afc 100%);
+  filter: blur(123px);
+}
+
+.pink__gradient {
+  background: linear-gradient(90deg, rgba(188, 165, 255, 0) 0%, #f7066a 100%);
+  filter: blur(150px);
+}
+
+.orange__gradient {
+  background: linear-gradient(90deg, rgba(188, 165, 255, 0) 0%, #fd5701 100%);
+  filter: blur(150px);
 }

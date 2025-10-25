@@ -1,5 +1,4 @@
 import React from 'react';
-import backgroundImage from '/assets/fondo-blanco.png';
 
 const VideosSection = () => {
 
@@ -16,12 +15,10 @@ const VideosSection = () => {
   ];
 
   return (
-    <section 
-      id="videos" 
-      className="h-screen w-full overflow-hidden py-16 px-4 md:px-8 lg:px-16 bg-gray-100"
-    >
-      <img src={backgroundImage} className='absolute inset-0 w-full h-full object-cover object-center z-0'></img>
+    <section id="videos" className="h-screen w-full overflow-hidden py-16 px-4 md:px-8 lg:px-16">
+
       <div className="max-w-7xl mx-auto">
+
         {/* Título */}
         <div className="titulo-seccion-videos text-center mb-12">
           <h2 className="relative top-5 text-start text-4xl md:text-5xl font-medium text-primary">MIRA SUS VIDEOS</h2>
@@ -30,10 +27,9 @@ const VideosSection = () => {
         {/* Contenedor de videos */}
         <div className="relative top-5 grid grid-cols-1 lg:grid-cols-2 gap-8">
           {youtubeVideos.map((video, index) => (
-            <div 
-              key={index} 
-              className="min-h-[350px] aspect-w-16 aspect-h-9 w-full overflow-hidden rounded-xl shadow-xl"
-            >
+
+            <div key={index} className="min-h-[350px] aspect-w-16 aspect-h-9 w-full overflow-hidden rounded-xl shadow-xl">
+              
               <iframe
                 src={`https://www.youtube.com/embed/${video.id}${video.startTime ? `?start=${video.startTime}` : ''}`}
                 title={video.title}
@@ -42,10 +38,14 @@ const VideosSection = () => {
                 className="w-full h-full"
                 loading="lazy"
               ></iframe>
+
             </div>
+
           ))}
         </div>
+
       </div>
+
     </section>
   );
 };

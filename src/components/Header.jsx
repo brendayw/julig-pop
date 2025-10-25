@@ -16,7 +16,7 @@ const Header = () => {
       
       {/* Menú para desktop (oculto en mobile) */}
       <nav className='hidden md:flex w-[75%] h-[49px] items-center justify-center'>
-        <a className='no-underline cursor-pointer font-montserrat text-[15px] text-primary border border-primary rounded-[45px] py-[5px] px-[30px] ml-[15px] hover:bg-primary hover:text-white transition-colors' href="#principal">Inicio</a>
+        <a className='no-underline cursor-pointer font-montserrat text-[15px] text-primary border border-primary rounded-[45px] py-[5px] px-[30px] ml-[15px] hover:bg-primary hover:text-white transition-colors' href="#">Inicio</a>
         <a className='no-underline cursor-pointer font-montserrat text-[15px] text-primary border border-primary rounded-[45px] py-[5px] px-[30px] ml-[15px] hover:bg-primary hover:text-white transition-colors' href="#biografia">Biografía</a>
         <a className='no-underline cursor-pointer font-montserrat text-[15px] text-primary border border-primary rounded-[45px] py-[5px] px-[30px] ml-[15px] hover:bg-primary hover:text-white transition-colors' href="#musica">Música</a>
         <a className='no-underline cursor-pointer font-montserrat text-[15px] text-primary border border-primary rounded-[45px] py-[5px] px-[30px] ml-[15px] hover:bg-primary hover:text-white transition-colors' href="#videos">Videos</a>

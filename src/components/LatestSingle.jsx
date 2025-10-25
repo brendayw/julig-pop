@@ -5,13 +5,8 @@ import instintoAnimal from '/assets/instintoanimal.png';
 
 const LatestSingle = () => {
   return (
-    <section id="novedades" className="relative h-screen w-full overflow-hidden novedades ultimo_single siguiente-seccion ">
-      <img 
-        src={backgroundImage} 
-        alt="fondo juli g" 
-        className="absolute inset-0 w-full h-full object-cover object-center z-0"
-      />
-      
+    <section className='relative h-screen w-full overflow-hidden'>
+
       <div className="relative z-10 info-single">
         <div className="titulo-single">
           <img src={instintoAnimal} className='absolute z-10 top-[-65px] left-[550px]'></img>
@@ -28,7 +23,8 @@ const LatestSingle = () => {
         </div>
       </div>
 
-      <div className="relative z-10 items-center ultimo-single">
+      <div className="relative z-10 items-center">
+
         <iframe 
           className="relative top-32 left-20 api-single" 
           style={{borderRadius: '12px'}}

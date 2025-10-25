@@ -3,7 +3,6 @@ import { useRef } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import logo from '/assets/juli_g.png';
-import backgroundImageWhite from '/assets/fondo-blanco.png';
 import backgroundImage from '/assets/IMG_9208.png';
 import instagramIcon from '/assets/redes/instagram.png';
 import spotifyIcon from '/assets/redes/spotify.png';
@@ -32,60 +31,148 @@ const HeroSection = () => {
   };
 
   return (
-    <section id="principal" className="relative h-screen w-full overflow-hidden siguiente-seccion">
-      {/* Fondo blanco */}
-      <img 
-        src={backgroundImageWhite} 
-        alt="foto de fondo blanca" 
-        className='absolute inset-0 w-full h-full object-cover object-center z-0'
-      />
+    <section className='relative h-screen overflow-hidden'>      
       
       {/* Imagen principal */}
-      <img 
-        src={backgroundImage} 
-        alt="foto juli g" 
-        className='absolute z-1 top-[30px] right-0 w-[900px] h-[574px] z-[2] [filter:drop-shadow(5px_5px_10px_rgba(22,22,22,0.795))]' 
+      <div className="absolute top-[30px] right-0 w-[900px] h-[574px] z-[2]">
+
+        {/* <div className="absolute inset-10 blue__gradient z-[1] opacity-50"></div> */}
+
+        {/* <div className="absolute inset-0 orange__gradient z-[1] opacity-50"></div> */}
+        
+        <img  
+          src={backgroundImage} 
+          alt="foto juli g" 
+          className="absolute inset-5 w-full h-full object-cover z-[1] opacity-[85%]"
+        />
+      </div>
+    
+      {/* Logo */}
+      <motion.img ref={logoRef} src={logo} alt="logo_julig" 
+        className='relative z-10 top-[65px] ml-12 w-[613px] h-[292px] opacity-50'{...unifiedAnimation}
       />
 
-      {/* Logo */}
-      <motion.img 
-        ref={logoRef}
-        src={logo} 
-        alt="logo_julig" 
-        className='relative z-10 top-[50px] ml-12 w-[633px] h-[312px]'
-        {...unifiedAnimation}
-      />
+      <div className='absolute z-[0] w-[45%] h-[40%] top-10 blue__gradient'></div>
 
       {/* Redes sociales - MISMA ANIMACIÓN que el logo */}
       <div ref={linksRef} className="relative w-[30%] z-10 top-10 left-10 flex flex-col gap-2">
+        
         <motion.a 
           href="https://www.instagram.com/juligpop/" 
-          className="p-3"
+          className="relative flex items-center gap-3 p-3"
           {...unifiedAnimation}
           animate={areLinksInView ? unifiedAnimation.animate : unifiedAnimation.initial}
           transition={{ ...unifiedAnimation.animate.transition, delay: 0.2 }}
         >
-          <img src={instagramIcon} alt="Instagram" className="w-12 h-12"/>
+          {/* Contenedor del ícono con hover controlado */}
+          <motion.div 
+            className="relative flex items-center"
+            whileHover="hover"
+            initial="rest"
+            animate="rest"
+          >
+            {/* Icono */}
+            <motion.img 
+              src={instagramIcon} 
+              alt="Instagram" 
+              className="w-12 h-12"
+              variants={{
+                rest: { scale: 1 },
+                hover: { scale: 1.1 }
+              }}
+              transition={{ type: "spring", stiffness: 200, damping: 10 }}
+            />
+
+            {/* Texto (animado al hover del ícono) */}
+            <motion.span
+              variants={{
+                rest: { opacity: 0, x: 0 },
+                hover: { opacity: 1, x: 20 }
+              }}
+              transition={{ duration: 0.4 }}
+              className="absolute left-14 text-white text-lg tracking-wide font-light pointer-events-none"
+            >
+              Instagram
+            </motion.span>
+          </motion.div>
         </motion.a>
 
         <motion.a 
           href="https://open.spotify.com/intl-es/artist/2RUcSxfSd8UIa2s5YWZatx" 
-          className="p-3"
+          className="relative flex items-center gap-3 p-3"
           {...unifiedAnimation}
           animate={areLinksInView ? unifiedAnimation.animate : unifiedAnimation.initial}
-          transition={{ ...unifiedAnimation.animate.transition, delay: 0.3 }}
+          transition={{ ...unifiedAnimation.animate.transition, delay: 0.2 }}
         >
-          <img src={spotifyIcon} alt="Spotify" className="w-12 h-12"/>
+          {/* Contenedor del ícono */}
+          <motion.div 
+            className="relative flex items-center"
+            whileHover="hover"
+            initial="rest"
+            animate="rest"
+          >
+            <motion.img
+              src={spotifyIcon}
+              alt="Spotify"
+              className="w-12 h-12"
+              variants={{
+                rest: { scale: 1 },
+                hover: { scale: 1.1 }
+              }}
+              transition={{ type: "spring", stiffness: 200, damping: 10 }}
+            />
+
+            {/* Texto */}
+            <motion.span
+              variants={{
+                rest: { opacity: 0, x: 0 },
+                hover: { opacity: 1, x: 20 }
+              }}
+              transition={{ duration: 0.4 }}
+              className="absolute left-14 text-white text-lg tracking-wide font-light pointer-events-none"
+            >
+              Spotify
+            </motion.span>
+          </motion.div>
         </motion.a>
 
         <motion.a 
           href="https://www.youtube.com/channel/UCBjbu8ZF62AuTcPQBx5a8FA" 
-          className="p-3"
+          className="relative flex items-center gap-3 p-3"
           {...unifiedAnimation}
           animate={areLinksInView ? unifiedAnimation.animate : unifiedAnimation.initial}
-          transition={{ ...unifiedAnimation.animate.transition, delay: 0.4 }}
+          transition={{ ...unifiedAnimation.animate.transition, delay: 0.2 }}
         >
-          <img src={youtubeIcon} alt="YouTube" className="w-12 h-12"/>
+          <motion.div
+            className="relative flex items-center"
+            whileHover="hover"
+            initial="rest"
+            animate="rest"
+          >
+            <motion.img
+              src={youtubeIcon}
+              alt="YouTube"
+              className="w-12 h-12"
+              variants={{
+                rest: { scale: 1 },
+                hover: { scale: 1.1 }
+              }}
+              transition={{ type: "spring", stiffness: 200, damping: 10 }}
+            />
+
+            {/* Texto */}
+            <motion.span
+              variants={{
+                rest: { opacity: 0, x: 0 },
+                hover: { opacity: 1, x: 20 }
+              }}
+              transition={{ duration: 0.4 }}
+              className="absolute left-14 text-white text-lg tracking-wide font-light pointer-events-none"
+            >
+              Youtube
+            </motion.span>
+
+          </motion.div>
         </motion.a>
       </div>
     </section>
